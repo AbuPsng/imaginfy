@@ -73,6 +73,8 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
+    console.log("webhooks created User", user);
+
     const newUser = await createUser(user);
 
     // Set public metadata

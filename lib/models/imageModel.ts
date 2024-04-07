@@ -34,6 +34,6 @@ const ImageSchema = new Schema({
   updatedAt: { type: Date, default: Date.now },
 });
 
-const ImageModel = models?.ImageModel || model("Image", ImageSchema);
+const Image = models?.Image || model("Image", ImageSchema);
 
-export default ImageModel;
+export default Image;
