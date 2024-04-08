@@ -19,9 +19,7 @@ export async function POST(req: Request) {
 
   // Get the headers
   const headerPayload = headers();
-  console.log("webhookd headerPayload", headerPayload);
   const svix_id = headerPayload.get("svix-id");
-  console.log("webhookd svix_is", svix_id);
   const svix_timestamp = headerPayload.get("svix-timestamp");
   const svix_signature = headerPayload.get("svix-signature");
 
@@ -72,8 +70,6 @@ export async function POST(req: Request) {
       lastName: last_name,
       photo: image_url,
     };
-
-    console.log("webhooks created User", user);
 
     const newUser = await createUser(user);
 

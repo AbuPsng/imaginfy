@@ -12,6 +12,8 @@ const AddTransformationTypePage = async ({
   const { userId } = auth();
   const transformation = transformationTypes[type];
 
+  console.log(userId);
+
   if (!userId) {
     redirect("/sign-in");
   }
