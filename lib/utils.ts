@@ -121,9 +121,9 @@ export const download = (url: string, filename: string) => {
       const blobURL = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = blobURL;
-
       if (filename && filename.length)
         a.download = `${filename.replace(" ", "_")}.png`;
+      console.log(a);
       document.body.appendChild(a);
       a.click();
     })
